@@ -36,13 +36,15 @@ engine skips interpolation in that direction:
 
 **Bicubic.** From four samples `p(-1)..p(2)`:
 
-```
-p(x) = (a x^3 + b x^2 + c x + d) / 2
-a = -p(-1) + 3p(0) - 3p(1) + p(2)
-b = 2p(-1) - 5p(0) + 4p(1) - p(2)
-c = -p(-1) + p(1)
-d = 2p(0)
-```
+$$
+\begin{aligned}
+&p(x) = (a x^3 + b x^2 + c x + d) / 2 \\
+&a = -p(-1) + 3p(0) - 3p(1) + p(2) \\
+&b = 2p(-1) - 5p(0) + 4p(1) - p(2) \\
+&c = -p(-1) + p(1) \\
+&d = 2p(0)
+\end{aligned}
+$$
 
 The result is rounded and clamped to `[0, 255]`.
 
